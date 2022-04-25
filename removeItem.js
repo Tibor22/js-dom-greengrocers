@@ -19,6 +19,7 @@ export function removeItem(e) {
     return item.quantity > 0;
   });
   state.baseTotal = state.cart.reduce((acc, item) => (acc += +item.price), 0);
-  renderCartItems();
+  state.filtered = state.cart;
+  renderCartItems(state.cart);
   getTotal();
 }

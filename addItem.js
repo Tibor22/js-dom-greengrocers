@@ -15,6 +15,6 @@ export function addItem(e) {
     }
     return item.quantity > 0;
   });
-  renderCartItems();
+  renderCartItems(state.cart);
   getTotal();
 }

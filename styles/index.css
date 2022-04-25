@@ -1,7 +1,7 @@
 /* Typography */
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;
 }
 
 h1,
@@ -67,7 +67,24 @@ button {
 
 /* Cart */
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+
+  justify-content: center;
+}
+
+.filter-items {
+  grid-column: 3/5;
+
+  grid-row: 1;
+  align-self: start;
+  margin-top: 2rem;
+}
+
 #cart {
+  grid-column: 5/7;
+
   height: 60vh;
   padding: 1rem;
 
@@ -181,4 +198,25 @@ button {
     border-top: 2px solid #00675b;
     border-bottom: 2px solid #00675b;
   }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.sort {
+  grid-column: 7/8;
+  grid-row: 1;
+
+  margin-left: 1.5rem;
+  margin-top: 4rem;
+}
+
+.sort img {
+  height: 2rem;
+  cursor: pointer;
+}
+
+.sort img:hover {
+  filter: invert(40%);
 }
